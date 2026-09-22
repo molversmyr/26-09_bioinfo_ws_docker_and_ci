@@ -51,7 +51,7 @@ jobs:
       - name: Run tests on built image
         run: |
           docker run --rm ghcr.io/${{ github.actor }}/greeter:latest python3 -m unittest discover -s tests -p "test_*.py"
-  lint:
+  lint-ruff:
    name: Lint Python Code with ruff
    runs-on: ubuntu-latest
    steps:
